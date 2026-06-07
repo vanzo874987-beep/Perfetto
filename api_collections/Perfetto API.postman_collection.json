@@ -1,0 +1,162 @@
+{
+  "info": {
+    "_postman_id": "7f63b310-86cc-428a-9f88-32eb19c48b5d",
+    "name": "Perfetto API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "50445460",
+    "_collection_link": "https://go.postman.co/collection/50445460-7f63b310-86cc-428a-9f88-32eb19c48b5d?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "POST Login",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "if (pm.response.code === 200) {\r",
+              "    pm.environment.set(\"token\", pm.response.json().token);\r",
+              "}"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"username\": \"Ivan\", \"password\": \"pass123\"}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/v1/auth/login",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "v1",
+            "auth",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET Catalog",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{token}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/v1/catalog",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "v1",
+            "catalog"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "POST Add to Cart",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{token}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"product_id\": 295144, \"quantity\": 1}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/v1/cart",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "v1",
+            "cart"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "New Request",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{token}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"courier_id\": 15435, \"status\": \"with_courier\"}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/v1/delivery/orders/120/status",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "v1",
+            "delivery",
+            "orders",
+            "120",
+            "status"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
