@@ -2,7 +2,7 @@ Perfetto — QA Portfolio
 
 Тестовая документация для проекта Perfetto — экосистемы для управления заказами и доставкой.
 
-Стек:React Native, Ruby on Rails 7, PostgreSQL, Kafka, Redis, ClickHouse, Docker.
+Стек:React Native, Ruby on Rails 7, PostgreSQL, Kafka, Redis.
 
 Моя роль: Manual QA Engineer. Функциональное тестирование, API, написание документации, SQL.
 
@@ -22,7 +22,7 @@ Perfetto — QA Portfolio
  Микросервисы: бонусы, нотификации, доставка
 
 📊 Основные артефакты
-Чек-листы
+ Чек-листы
  Smoke: 7 проверок (критический путь)
  Full: 29 проверок (все модули)
 
@@ -40,15 +40,6 @@ Perfetto — QA Portfolio
  SQL
  SELECT, WHERE, JOIN, GROUP BY, агрегация
  Проверка заказов, бонусов, пользователей
-
-
-
- 🚀 Как запустить коллекцию Postman
-1. Скачай `api_collections/Perfetto API.postman_collection.json`
-2. Открой Postman → Import
-3. Настрой Environment с `base_url`
-4. Запускай запросы
-
 
  👤 Контакты
 Автор: Новиков Иван  
