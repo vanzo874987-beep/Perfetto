@@ -1,1 +1,32 @@
-# Smoke and acceptance checklists  # Detailed test cases  # Bug reports  # Postman collections  # Test data files  # SQL queries for DB checks 
+Проверить статус заказа после оплаты
+SELECT id, user_id, status, total, created_at
+FROM orders
+WHERE id = 120; 
+
+Проверить начисление бонусов пользователю
+SELECT user_id, amount, reason, created_at
+FROM bonuses_ledger
+WHERE user_id = 42;
+
+Найти пользователя по email
+SELECT id, name, email, created_at
+FROM users
+WHERE email = 'Gena4556atam@mail.ru';
+
+Найти все заказы за последнюю неделю
+SELECT id, user_id, status, total, created_at
+FROM orders
+WHERE created_at >= NOW() - INTERVAL '7 days'
+ORDER BY created_at DESC;
+
+Вывести пользователя и все его заказы 
+SELECT u.name, u.email, o.id AS order_id, o.status, o.total, o.created_at
+FROM users u
+JOIN orders o ON u.id = o.user_id
+WHERE u.id = 42;
+
+Посчитать, сколько всего потратил пользователь
+SELECT user_id, SUM(total) AS total_spent, COUNT(id) AS orders_count
+FROM orders
+WHERE user_id = 42 AND status = 'delivered'
+GROUP BY user_id;
