@@ -7,9 +7,6 @@ Perfetto — QA Portfolio
 Моя роль: Manual QA Engineer. Функциональное тестирование, API, написание документации, SQL.
 
  📁 Структура репозитория
-
-
-
  [`checklists/`](checklists/) | Чек-листы: smoke, regression, acceptance (36 проверок) 
  [`test_cases/`](test_cases/) | Тест-кейсы: UI, API, E2E 
  [`bug_reports/`](bug_reports/) | Баг-репорты с шагами и скриншотами 
@@ -17,20 +14,14 @@ Perfetto — QA Portfolio
  [`sql/`](sql/) | SQL-запросы для проверки данных в БД 
  [`test_data/`](test_data/) | Тестовые данные (JSON, CSV) 
 
-
-
 🧪 Что я тестировал
-
  Мобильное приложение (iOS + Android, React Native)
  Веб-админку для операторов
  API через Postman (REST + GraphQL)
  Интеграции: Kafka, Redis, ClickHouse, МойСклад, Bitrix24
  Микросервисы: бонусы, нотификации, доставка
 
-
-
 📊 Основные артефакты
-
 Чек-листы
  Smoke: 7 проверок (критический путь)
  Full: 29 проверок (все модули)
@@ -53,7 +44,6 @@ Perfetto — QA Portfolio
 
 
  🚀 Как запустить коллекцию Postman
-
 1. Скачай `api_collections/Perfetto API.postman_collection.json`
 2. Открой Postman → Import
 3. Настрой Environment с `base_url`
@@ -61,7 +51,6 @@ Perfetto — QA Portfolio
 
 
  👤 Контакты
-
 Автор: Новиков Иван  
 Telegram: @inovik98  
 Email: vanzo874987@gmail.com
