@@ -1,13 +1,6 @@
-![QA](https://img.shields.io/badge/QA-Manual-blue)
-![Postman](https://img.shields.io/badge/Postman-Collection-orange)
-![SQL](https://img.shields.io/badge/SQL-PostgreSQL-green)
-![Git](https://img.shields.io/badge/Git-Ready-red)
 Perfetto — QA Portfolio
-
 Тестовая документация для проекта Perfetto — экосистемы для управления заказами и доставкой.
-
 Стек:React Native, Ruby on Rails 7, PostgreSQL, Kafka, Redis.
-
 Моя роль: Manual QA Engineer. Функциональное тестирование, API, написание документации, SQL.
 
  📁 Структура репозитория
